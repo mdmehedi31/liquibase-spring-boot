@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: mehedi
+      changes:
+        - createTable:
+            tableName: tb_user
+            columns:
+              - column:
+                  name: id
+                  type: int
+              - column:
+                  name: user_name
+                  type: varchar(500)
+              - column:
+                  name: email
+                  type: varchar(300)
+  - changeSet:
+      id: 1
+      author: sakib
+      changes:
+        - renameColumn:
+            tableName: tb_user
+            oldColumnName: user_name
+            newColumnName: username
+
+  - changeSet:
+      id: 2
+      author: rahim
+      changes:
+        - addColumn:
+            tableName: tb_user
+            columns:
+              - column:
+                  name: age
+                  type: int
+
+
+
